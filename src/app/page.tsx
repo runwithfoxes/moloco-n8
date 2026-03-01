@@ -10,8 +10,8 @@ export default function Home() {
         <div className="hero-image-wrapper">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/train.png"
-            alt="Illustrated scene of a traveller on a train looking out at mountains and a turquoise lake"
+            src="/hero.png"
+            alt="Illustrated scene of a creative workspace overlooking a city, filled with green plants"
           />
         </div>
 
