@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="mb-4">
-              <Image src="/logo-tight.png" alt="Moloco" width={904} height={155} className="h-[24px] w-auto" />
+              <Image src="/logo-tight.png" alt="Moloco" width={904} height={155} className="h-[15px] w-auto" />
             </div>
             <p className="text-[0.8125rem] leading-relaxed text-text-on-dark-tertiary">
               Grow, scale, and monetize with AI advertising.
