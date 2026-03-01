@@ -4,37 +4,62 @@ import ProductWindow from "@/components/ProductWindow";
 export default function Home() {
   return (
     <>
-      {/* ── HERO ── dark forest green block ── */}
-      <section className="bg-bg-dark pt-28 pb-16 md:pt-36 md:pb-20 px-6 md:px-10">
-        <div className="max-w-[1280px] mx-auto">
-          <div className="max-w-[700px]">
-            <h1 className="text-[clamp(2rem,4.5vw,3.25rem)] font-medium leading-[1.08] tracking-tight text-text-on-dark mb-5">
-              The future of advertising
-              <br />
-              <span className="text-text-on-dark-tertiary">
-                is powered by machine learning.
-              </span>
+      {/* ── HERO: Full-bleed train image with text overlay ── */}
+      <section className="hero-image-section min-h-[100vh] relative overflow-hidden">
+        {/* Background image */}
+        <div className="hero-image-wrapper">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/train.png"
+            alt="Illustrated scene of a traveller on a train looking out at mountains and a turquoise lake"
+          />
+        </div>
+
+        {/* Overlay for text contrast — dark green tint letting the scene through */}
+        <div className="absolute inset-0 z-[1]" style={{
+          background: 'linear-gradient(180deg, rgba(15,31,21,0.65) 0%, rgba(15,31,21,0.3) 35%, rgba(15,31,21,0.15) 55%, rgba(15,31,21,0.55) 100%)'
+        }} />
+
+        {/* Content overlaid on image */}
+        <div className="relative z-[2] max-w-[1280px] mx-auto px-6 md:px-10 pt-32 md:pt-40 pb-8 flex flex-col min-h-[100vh]">
+          {/* Large headline text */}
+          <div className="flex-1 flex flex-col justify-center max-w-[960px]">
+            <h1 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-medium leading-[1.15] tracking-tight text-white mb-0">
+              <span className="block">The future of advertising</span>
+              <span className="block text-white/40">is powered by machine learning.</span>
             </h1>
-            <div className="flex flex-wrap items-center gap-4">
-              <Link
-                href="/products"
-                className="inline-block px-4 py-2 bg-accent text-bg-dark rounded-md text-[0.8125rem] font-semibold hover:bg-accent-hover transition-colors no-underline"
-              >
-                Get started
-              </Link>
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-1.5 text-[0.875rem] font-medium text-text-on-dark-secondary hover:text-text-on-dark transition-colors no-underline"
-              >
-                Learn about our platform &rarr;
-              </Link>
+          </div>
+
+          {/* Divider + subtext row */}
+          <div className="mt-auto">
+            <div className="h-px bg-white/15 mb-6" />
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
+              <p className="text-[0.75rem] font-medium text-white/30 uppercase tracking-[0.12em]">
+                Moloco Ads Platform
+              </p>
+              <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-5">
+                <p className="text-[0.9375rem] text-white/55 max-w-[380px] leading-relaxed hidden md:block">
+                  AI-powered advertising reaching 2B+ daily users across 3M independent apps.
+                </p>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-1.5 text-[0.875rem] font-medium text-white/50 hover:text-white/80 transition-colors no-underline shrink-0"
+                >
+                  Learn more &rarr;
+                </Link>
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* Floating product window — right-aligned analytics dashboard */}
+        <div className="absolute bottom-40 right-10 lg:right-[calc(50%-540px)] z-[3] w-[560px] hidden lg:block">
+          <ProductWindow variant="analytics" />
         </div>
       </section>
 
       {/* ── TRUSTED BY ── company badges */}
-      <section className="bg-bg-cream py-10 md:py-12 px-6 md:px-10">
+      <section className="bg-bg-cream pt-32 md:pt-40 pb-10 md:pb-12 px-6 md:px-10">
         <div className="max-w-[1280px] mx-auto">
           <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             {["Pinterest", "Bumble", "DraftKings", "Robinhood", "Indeed", "Wayfair", "King", "Roblox"].map(

@@ -111,27 +111,24 @@ h1, h2, h3, h4 {
   line-height: 1.1;
 }
 
-/* ── N7: Subtle green landscape wash ── */
-.landscape-bg {
+/* ── N8: Hero image section with overlay ── */
+.hero-image-section {
   position: relative;
   overflow: hidden;
+  background: var(--bg-dark);
 }
-.landscape-bg::before {
-  content: '';
+
+.hero-image-wrapper {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg,
-      rgba(140, 180, 130, 0.15) 0%,
-      rgba(160, 190, 140, 0.12) 30%,
-      rgba(130, 165, 120, 0.10) 50%,
-      rgba(100, 140, 95, 0.12) 70%,
-      rgba(60, 90, 55, 0.18) 100%
-    ),
-    radial-gradient(ellipse at 20% 40%, rgba(180, 210, 100, 0.15) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 30%, rgba(130, 175, 120, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 90%, rgba(15, 31, 21, 0.10) 0%, transparent 50%);
   z-index: 0;
+}
+
+.hero-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
 }
 
 /* ── Floating product window ── */
