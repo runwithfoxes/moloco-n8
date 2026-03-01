@@ -26,7 +26,7 @@ export default function Home() {
           <div className="flex-1 flex flex-col justify-center max-w-[960px]">
             <h1 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-medium leading-[1.15] tracking-tight text-white mb-0">
               <span className="block">The future of advertising</span>
-              <span className="block text-white/40">is powered by machine learning.</span>
+              <span className="block text-white/65">is powered by machine learning.</span>
             </h1>
           </div>
 
@@ -53,7 +53,7 @@ export default function Home() {
         </div>
 
         {/* Floating product window — right-aligned analytics dashboard */}
-        <div className="absolute bottom-40 right-10 lg:right-[calc(50%-540px)] z-[3] w-[560px] hidden lg:block">
+        <div className="absolute bottom-40 right-10 lg:right-[calc(50%-600px)] z-[3] w-[644px] hidden lg:block">
           <ProductWindow variant="analytics" />
         </div>
       </section>

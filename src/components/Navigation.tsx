@@ -29,7 +29,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-7 text-[0.875rem] font-medium text-text-on-dark-secondary">
+        <div className="hidden md:flex items-center gap-7 text-[0.875rem] font-medium text-text-on-dark">
           <Link
             href="/products"
             className="hover:text-text-on-dark transition-colors no-underline"
@@ -54,7 +54,7 @@ export default function Navigation() {
         <div className="hidden md:flex items-center gap-4">
           <Link
             href="#"
-            className="text-[0.875rem] font-medium text-text-on-dark-secondary hover:text-text-on-dark transition-colors no-underline"
+            className="text-[0.875rem] font-medium text-text-on-dark hover:text-white transition-colors no-underline"
           >
             Sign in
           </Link>
