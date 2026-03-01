@@ -25,7 +25,7 @@ export default function Navigation() {
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 flex items-center justify-between h-[4.25rem]">
         {/* Logo */}
         <Link href="/" className="flex items-center no-underline">
-          <Image src="/logo-tight.png" alt="Moloco" width={904} height={155} className="h-[22px] w-auto" priority />
+          <Image src="/logo-tight.png" alt="Moloco" width={904} height={155} className="h-[24px] w-auto" priority />
         </Link>
 
         {/* Desktop nav */}

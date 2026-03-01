@@ -406,7 +406,7 @@ function AnalyticsDash({ visible }: { visible: boolean }) {
           <p className="text-[0.5625rem] text-text-tertiary">Model performance across 2B+ daily users</p>
         </div>
         <div className="flex gap-1">
-          <span className="px-2 py-1 bg-text-primary text-white rounded text-[0.5625rem] font-medium">7d</span>
+          <span className="px-2 py-1 bg-accent text-bg-dark rounded text-[0.5625rem] font-medium">7d</span>
           <span className="px-2 py-1 border border-border-light rounded text-[0.5625rem] text-text-secondary">30d</span>
           <span className="px-2 py-1 border border-border-light rounded text-[0.5625rem] text-text-secondary">90d</span>
         </div>
@@ -421,7 +421,7 @@ function AnalyticsDash({ visible }: { visible: boolean }) {
               className="flex-1 rounded-sm transition-all ease-out"
               style={{
                 height: visible ? `${h}%` : "0%",
-                background: i >= 16 ? 'var(--text-primary)' : 'rgba(26, 42, 30, 0.1)',
+                background: i >= 16 ? 'var(--accent)' : 'rgba(200, 220, 57, 0.15)',
                 transitionDuration: "800ms",
                 transitionDelay: `${200 + i * 50}ms`,
               }}
