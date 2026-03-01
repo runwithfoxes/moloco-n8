@@ -5,18 +5,30 @@ import AnimatedStats from "@/components/AnimatedStats";
 export default function Products() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-bg-dark pt-32 pb-16 md:pt-44 md:pb-24 px-6 md:px-10">
-        <div className="max-w-[1280px] mx-auto">
+      {/* Hero: Full-bleed image */}
+      <section className="hero-image-section min-h-[70vh] relative overflow-hidden">
+        <div className="hero-image-wrapper">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/hero-products.png"
+            alt="Illustrated scene of a man standing on a rooftop overlooking a dense cityscape"
+          />
+        </div>
+
+        <div className="absolute inset-0 z-[1]" style={{
+          background: 'linear-gradient(180deg, rgba(15,31,21,0.7) 0%, rgba(15,31,21,0.35) 40%, rgba(15,31,21,0.2) 60%, rgba(15,31,21,0.6) 100%)'
+        }} />
+
+        <div className="relative z-[2] max-w-[1280px] mx-auto px-6 md:px-10 pt-32 md:pt-44 pb-16 md:pb-24 flex flex-col min-h-[70vh] justify-end">
           <div className="max-w-[720px]">
-            <p className="text-[0.75rem] font-medium text-text-on-dark-tertiary uppercase tracking-[0.08em] mb-5">
+            <p className="text-[0.75rem] font-medium text-white/40 uppercase tracking-[0.08em] mb-5">
               Products
             </p>
-            <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-medium leading-[1.05] tracking-tight mb-7 text-text-on-dark">
+            <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-medium leading-[1.05] tracking-tight mb-7 text-white">
               Built for outcomes, powered by{" "}
-              <span className="text-text-on-dark-tertiary">deep learning</span>
+              <span className="text-white/65">deep learning</span>
             </h1>
-            <p className="text-[clamp(1.0625rem,1.4vw,1.1875rem)] leading-relaxed text-text-on-dark-secondary">
+            <p className="text-[clamp(1.0625rem,1.4vw,1.1875rem)] leading-relaxed text-white/70">
               Three platforms that share a common foundation: planet-scale
               machine learning optimized for real performance, not vanity
               metrics.
